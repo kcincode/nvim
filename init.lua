@@ -588,6 +588,8 @@ require("lazy").setup({
 				python = { "ruff_lsp" },
 				javascript = { "prettier" },
 				typescript = { "prettier" },
+				javascriptreact = { "prettier" },
+				typescriptreact = { "prettier" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--

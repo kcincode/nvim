@@ -511,6 +511,7 @@ require("lazy").setup({
 				cssls = {},
 				tsserver = {},
 				ruff_lsp = {},
+				jinja_lsp = {},
 				pyright = {
 					settings = {
 						pyright = {
@@ -540,6 +541,7 @@ require("lazy").setup({
 				"stylua", -- Used to format Lua code
 				"prettier",
 				"eslint_d",
+				"djlint",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -586,10 +588,15 @@ require("lazy").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "ruff_lsp" },
+				htmldjango = { "djlint" },
 				javascript = { "prettier" },
 				typescript = { "prettier" },
 				javascriptreact = { "prettier" },
 				typescriptreact = { "prettier" },
+				html = { "prettier" },
+				css = { "prettier" },
+				json = { "prettier" },
+
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--

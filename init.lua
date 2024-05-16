@@ -102,6 +102,11 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
+vim.keymap.set("n", "<C->>", "<c-w>5<", { desc = "Move window 5 spaces left" })
+vim.keymap.set("n", "<C-<>", "<c-w>5>", { desc = "Move window 5 spaces right" })
+vim.keymap.set("n", "<C-+>", "<C-W>+", { desc = "Move window 5 spaces up" })
+vim.keymap.set("n", "<C-_>", "<C-W>-", { desc = "Move window 5 spaces down" })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -524,6 +529,9 @@ require("lazy").setup({
 						},
 					},
 				},
+				intelephense = {},
+				elixirls = {},
+				tailwindcss = {},
 			}
 
 			-- Ensure the servers and tools above are installed
@@ -542,6 +550,7 @@ require("lazy").setup({
 				"prettier",
 				"eslint_d",
 				"djlint",
+				"pint",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -596,6 +605,7 @@ require("lazy").setup({
 				html = { "prettier" },
 				css = { "prettier" },
 				json = { "prettier" },
+				htmldjango = { "djlint" },
 
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
@@ -831,6 +841,25 @@ require("lazy").setup({
 		end,
 	},
 	{ "github/copilot.vim", lazy = false },
+	{
+		"luckasRanarison/tailwind-tools.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		opts = {
+			custom_filetypes = {
+				"html",
+				"css",
+				"php",
+				"twig",
+				"vue",
+				"svelte",
+				"astro",
+				"htmldjango",
+				"javascriptreact",
+				"typescriptreact",
+			},
+		},
+	},
+	{ "yaegassy/coc-htmldjango" },
 
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
 	-- init.lua. If you want these files, they are in the repository, so you can just download them and

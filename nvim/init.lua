@@ -543,7 +543,7 @@ require("lazy").setup({
 						},
 					},
 				},
-				intelephense = {},
+				phpactor = {},
 				elixirls = {},
 				tailwindcss = {},
 			}
@@ -935,6 +935,23 @@ require("lazy").setup({
 		},
 	},
 	{ "yaegassy/coc-htmldjango" },
+	{
+		"adalessa/laravel.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"tpope/vim-dotenv",
+			"MunifTanjim/nui.nvim",
+			"nvimtools/none-ls.nvim",
+		},
+		cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
+		keys = {
+			{ "<leader>la", ":Laravel artisan<cr>" },
+			{ "<leader>lr", ":Laravel routes<cr>" },
+			{ "<leader>lm", ":Laravel related<cr>" },
+		},
+		event = { "VeryLazy" },
+		config = true,
+	},
 
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
 	-- init.lua. If you want these files, they are in the repository, so you can just download them and

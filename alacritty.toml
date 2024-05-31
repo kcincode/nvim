@@ -1,0 +1,8 @@
+[font]
+size = 16
+normal = { family = "MesloLGS NF", style = "Regular" }
+
+[window.padding]
+x = 2
+y = 2
+

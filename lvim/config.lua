@@ -29,7 +29,8 @@ require('telescope').load_extension('fzf')
 local formatters = require "lvim.lsp.null-ls.formatters"
 
 formatters.setup {
-  { name = "prettier", filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "json", "css" } }
+  { name = "prettier", filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "json", "css" } },
+  { name = "djlint",   filetypes = { "htmldjango" } }
 }
 
 -- local lspconfig = require "lspconfig"
@@ -57,7 +58,40 @@ lvim.plugins = {
         panel = { enabled = false }
       })
     end
-  }
+  },
+  {
+    "luckasRanarison/tailwind-tools.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {
+      custom_filetypes = {
+        "html",
+        "css",
+        "php",
+        "twig",
+        "vue",
+        "svelte",
+        "astro",
+        "htmldjango",
+        "javascriptreact",
+        "typescriptreact",
+      },
+    },
+  }, {
+  "hrsh7th/nvim-cmp",
+  dependencies = {
+    "luckasRanarison/tailwind-tools.nvim",
+    "onsails/lspkind-nvim",
+  },
+  opts = function()
+    return {
+      formatting = {
+        format = require("lspkind").cmp_format({
+          before = require("tailwind-tools.cmp").lspkind_format
+        }),
+      }
+    }
+  end
+},
 }
 
 -- Below config is required to prevent copilot overriding Tab with a suggestion

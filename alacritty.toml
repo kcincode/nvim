@@ -4,10 +4,9 @@ normal = { family = "MesloLGS NF", style = "Regular" }
 
 [window]
 dimensions = { columns = 160, lines = 48 } 
-padding.x = 16
-padding.y = 32
-decorations = "Transparent"
-opacity = 0.97
+padding.x = 8
+padding.y = 0
+opacity = 0.95
 
 [colors]
 [colors.primary]

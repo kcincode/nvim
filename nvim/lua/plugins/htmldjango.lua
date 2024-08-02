@@ -1,1 +1,0 @@
-return { "yaegassy/coc-htmldjango" }

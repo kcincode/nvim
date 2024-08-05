@@ -10,6 +10,8 @@ return {
       "ruff-lsp",
       "ruff",
       "djlint",
+      "jinja-lsp",
+      "tailwindcss-language-server",
     },
   },
 }

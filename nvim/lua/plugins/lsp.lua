@@ -11,6 +11,10 @@ return {
         pyright = {},
         intelephense = {},
         ruff = {},
+        jinja_lsp = {
+          filetypes = { "htmldjango" },
+        },
+        tailwindcss = {},
       },
     },
   },

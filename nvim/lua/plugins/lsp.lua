@@ -8,7 +8,19 @@ return {
       ---@type lspconfig.options
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
+        pyright = {
+          settings = {
+            pyright = {
+              disableOrganizeImports = true, -- Using Ruff
+            },
+            python = {
+              analysis = {
+                ignore = { "*" }, -- Using Ruff
+                typeCheckingMode = "off",
+              },
+            },
+          },
+        },
         intelephense = {},
         ruff = {},
         jinja_lsp = {

@@ -15,7 +15,7 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         sh = { "shfmt" },
-        python = { "ruff" },
+        python = { "ruff_lsp" },
         typescript = { "prettier" },
         javascript = { "prettier" },
         javascriptreact = { "prettier" },

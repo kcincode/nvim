@@ -5,7 +5,7 @@ config.color_scheme = "rose-pine-moon"
 config.colors = { background = "262626" }
 
 config.font = wezterm.font("MesloLGS NF")
-config.font_size = 16
+config.font_size = 18
 
 config.initial_cols = 80
 config.initial_rows = 32

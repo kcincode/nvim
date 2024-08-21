@@ -3,6 +3,10 @@ return {
   opts = {
     ensure_installed = {
       "stylua",
+      "gopls",
+      "templ",
+      "html-lsp",
+      "elixir-ls",
       "prettier",
       "eslint_d",
       "pyright",

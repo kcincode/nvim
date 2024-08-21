@@ -3,7 +3,9 @@ return {
   opts = {
     ensure_installed = {
       "bash",
+      "go",
       "html",
+      "elixir",
       "javascript",
       "json",
       "lua",

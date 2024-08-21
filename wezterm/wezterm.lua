@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local config = {}
 
 config.color_scheme = "rose-pine-moon"
-config.colors = { background = "262626" }
+config.colors = { background = "232136" }
 
 config.font = wezterm.font("MesloLGS NF")
 config.font_size = 18

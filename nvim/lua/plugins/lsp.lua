@@ -21,12 +21,28 @@ return {
             },
           },
         },
+        htmx = {
+          filetypes = { "html", "templ" },
+        },
+        templ = {},
         intelephense = {},
         ruff = {},
         jinja_lsp = {
           filetypes = { "htmldjango" },
         },
-        tailwindcss = {},
+        html = {
+          filetypes = { "html", "templ" },
+        },
+        tailwindcss = {
+          settings = {
+            tailwindCSS = {
+              includeLanguages = {
+                templ = "html",
+                htmldjango = "html",
+              },
+            },
+          },
+        },
       },
     },
   },

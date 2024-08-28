@@ -7,6 +7,7 @@ return {
       "templ",
       "html-lsp",
       "elixir-ls",
+      "htmx-lsp",
       "prettier",
       "eslint_d",
       "pyright",

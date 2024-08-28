@@ -20,5 +20,11 @@ return {
       "yaml",
       "htmldjango",
     },
+    highlight = {
+      enable = true,
+    },
+  },
+  dependencies = {
+    "vrischmann/tree-sitter-templ",
   },
 }

@@ -6,6 +6,8 @@ return {
       "go",
       "html",
       "elixir",
+      "eex",
+      "heex",
       "javascript",
       "json",
       "lua",

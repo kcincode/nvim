@@ -27,6 +27,7 @@ return {
         templ = {},
         intelephense = {},
         ruff = {},
+        ruff_lsp = {},
         jinja_lsp = {
           filetypes = { "htmldjango" },
         },

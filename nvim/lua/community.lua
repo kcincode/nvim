@@ -14,5 +14,6 @@ return {
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.laravel" },
   { import = "astrocommunity.pack.python-ruff" },
+  { import = "astrocommunity.pack.elixir-phoenix" },
   -- import/override with your plugins folder
 }

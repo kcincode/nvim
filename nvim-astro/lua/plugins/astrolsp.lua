@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -76,6 +74,7 @@ return {
           end,
         },
       },
+      eslint_fix_on_save = false,
     },
     -- mappings to be set up on attaching of a language server
     mappings = {

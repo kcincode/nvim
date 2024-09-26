@@ -1,19 +1,32 @@
--- Customize Treesitter
-
----@type LazySpec
 return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
     ensure_installed = {
-      "lua",
-      "vim",
-      "python",
+      "bash",
       "go",
-      "javascript",
-      "typescript",
       "html",
-      "css",
-      -- add more arguments for adding more treesitter parsers
+      "elixir",
+      "eex",
+      "heex",
+      "javascript",
+      "json",
+      "lua",
+      "markdown",
+      "markdown_inline",
+      "python",
+      "query",
+      "regex",
+      "tsx",
+      "typescript",
+      "vim",
+      "yaml",
+      "htmldjango",
     },
+    highlight = {
+      enable = true,
+    },
+  },
+  dependencies = {
+    "vrischmann/tree-sitter-templ",
   },
 }

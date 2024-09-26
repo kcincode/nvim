@@ -38,7 +38,3 @@ white = '#acb0d0'
 [colors.selection]
 background = '#7aa2f7'
 
-[shell]
-program = "/opt/homebrew/bin/tmux"
-args = ["new-session"]
-

@@ -18,6 +18,7 @@ return {
       "djlint",
       "jinja-lsp",
       "tailwindcss-language-server",
+      "blade-formatter",
     },
   },
 }

@@ -23,6 +23,7 @@ return {
         htmldjango = { "djlint" },
         html = { "prettier" },
         templ = { "templ" },
+        blade = { "blade-formatter" },
       },
       -- The options you set here will be merged with the builtin formatters.
       -- You can also define any custom formatters here.

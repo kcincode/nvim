@@ -1,32 +1,23 @@
 return {
-  "nvim-treesitter/nvim-treesitter",
-  opts = {
-    ensure_installed = {
-      "bash",
-      "go",
-      "html",
-      "elixir",
-      "eex",
-      "heex",
-      "javascript",
-      "json",
-      "lua",
-      "markdown",
-      "markdown_inline",
-      "python",
-      "query",
-      "regex",
-      "tsx",
-      "typescript",
-      "vim",
-      "yaml",
-      "htmldjango",
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "bash",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "regex",
+        "tsx",
+        "typescript",
+        "vim",
+        "yaml",
+        "php",
+      },
     },
-    highlight = {
-      enable = true,
-    },
-  },
-  dependencies = {
-    "vrischmann/tree-sitter-templ",
   },
 }

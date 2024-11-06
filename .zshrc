@@ -10,7 +10,6 @@ eval "$(starship init zsh)"
 export LDFLAGS="-L$(brew --prefix zbar)/lib"
 export CFLAGS="-I$(brew --prefix zbar)/include"
 
-
 # virtualenv wrapper
 export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
@@ -57,4 +56,5 @@ if which tmux 2>&1 >/dev/null; then
    tmux attach -t default || tmux new -s default; exit
  fi
 fi
+bindkey -s ^f "^u$XDG_CONFIG_HOME/tmux/tmux-sessionizer.sh^M"
 

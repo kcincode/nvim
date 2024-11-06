@@ -1,0 +1,5 @@
+tmux rename-window -t 1 VIM
+tmux split-window -t 1 -p 30
+tmux split-window -h -t 2
+tmux select-pane -t 1
+

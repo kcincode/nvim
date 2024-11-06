@@ -15,6 +15,7 @@ return {
         "regex",
         "tsx",
         "typescript",
+        "htmldjango",
         "vim",
         "yaml",
         "php",

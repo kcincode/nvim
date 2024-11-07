@@ -1,16 +1,18 @@
 local wezterm = require("wezterm")
 local config = {}
 
-config.color_scheme = "rose-pine-moon"
-config.colors = { background = "1a1a20", selection_bg = "b3b0cf", selection_fg = "111111" }
--- config.colors = { background = "232136", selection_bg = "b3b0cf", selection_fg = "111111" }
+config.max_fps = 120
+
+config.color_scheme = "catppuccin-mocha"
 
 config.font = wezterm.font("MesloLGS NF")
-config.font_size = 16
+config.font_size = 18
+config.dpi = 144.0
 
 config.initial_cols = 90
 config.initial_rows = 32
 
+config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
 config.show_tabs_in_tab_bar = false
@@ -19,10 +21,8 @@ config.show_new_tab_button_in_tab_bar = false
 config.window_padding = {
 	left = 2,
 	right = 2,
-	top = 2,
-	bottom = 2,
+	top = 15,
+	bottom = 0,
 }
-
--- config.default_prog = { "/opt/homebrew/bin/tmux", "new-session" }
 
 return config

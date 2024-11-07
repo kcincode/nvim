@@ -1,0 +1,24 @@
+{
+    "profiles": [
+        {
+            "complex_modifications": {
+                "parameters": {
+                    "basic.to_delayed_action_delay_milliseconds": 100,
+                    "basic.to_if_held_down_threshold_milliseconds": 50
+                }
+            },
+            "name": "Default profile",
+            "selected": true,
+            "simple_modifications": [
+                {
+                    "from": { "key_code": "left_option" },
+                    "to": [{ "key_code": "left_command" }]
+                }
+            ],
+            "virtual_hid_keyboard": {
+                "keyboard_type_v2": "ansi",
+                "mouse_key_xy_scale": 160
+            }
+        }
+    ]
+}

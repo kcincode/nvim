@@ -2,11 +2,7 @@ configstore/
 github-copilot/
 gtk-2.0/
 iterm2/
-zed/
 lazygit/
-tmux/plugins/tmux
-tmux/plugins/tmux-continuum
-tmux/plugins/tmux-cpu-mem-monitor
-tmux/plugins/tmux-resurrect
-tmux/plugins/vim-tmux-navigator
+zed/
+!zed/settings.json
 

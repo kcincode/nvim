@@ -5,6 +5,10 @@ return {
   opts = {
     formatters_by_ft = {
       htmldjango = { "djlint" },
+      javascript = { "prettier" },
+      typescript = { "prettier" },
+      javascriptreact = { "prettier" },
+      typescriptreact = { "prettier" },
     },
   },
 }

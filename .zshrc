@@ -56,5 +56,9 @@ if which tmux 2>&1 >/dev/null; then
    tmux attach -t default || tmux new -s default; exit
  fi
 fi
+
+# Disable software flow control (ctrl-s/ctrl-q) as its mostly just annoying. 
+stty -ixon
+
 bindkey -s ^f "^u$XDG_CONFIG_HOME/tmux/tmux-sessionizer.sh^M"
 

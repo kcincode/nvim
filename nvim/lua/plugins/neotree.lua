@@ -7,9 +7,9 @@ return {
     "MunifTanjim/nui.nvim",
     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
   },
-  init = function()
-    -- do nothing
-  end,
+  -- init = function ()
+  --   -- do nothing
+  -- end,
   opts = {
     sources = { "filesystem", "buffers", "git_status" },
     open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
@@ -19,6 +19,12 @@ return {
       bind_to_cwd = false,
       follow_current_file = { enabled = true },
       use_libuv_file_watcher = true,
+      filtered_items = {
+        visible = true,
+        -- hide_dotfiles = false,
+        -- hide_gitignored = false,
+        never_show = { ".git" },
+      },
     },
     default_component_configs = {
       indent = {

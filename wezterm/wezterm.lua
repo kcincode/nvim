@@ -10,7 +10,7 @@ config.font_size = 18
 config.dpi = 144.0
 
 config.initial_cols = 90
-config.initial_rows = 32
+config.initial_rows = 25
 
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false

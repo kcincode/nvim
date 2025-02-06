@@ -19,12 +19,26 @@ return {
     local icons = LazyVim.config.icons
 
     vim.o.laststatus = vim.g.lualine_laststatus
+    local clients_lsp = function()
+      local bufnr = vim.api.nvim_get_current_buf()
+
+      local clients = vim.lsp.get_clients({ bufnr = bufnr })
+      if next(clients) == nil then
+        return ""
+      end
+
+      local c = {}
+      for _, client in pairs(clients) do
+        table.insert(c, client.name)
+      end
+      return table.concat(c, "|")
+    end
 
     local opts = {
       options = {
         theme = "auto",
         globalstatus = vim.o.laststatus == 3,
-        disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter" } },
+        disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" } },
       },
       sections = {
         lualine_a = { "mode" },
@@ -45,46 +59,31 @@ return {
           { LazyVim.lualine.pretty_path() },
         },
         lualine_x = {
-          {
-            -- LSP clients attached to buffer
-            function()
-              local bufnr = vim.api.nvim_get_current_buf()
-
-              local clients = vim.lsp.buf_get_clients(bufnr)
-              if next(clients) == nil then
-                return ""
-              end
-
-              local c = {}
-              for _, client in pairs(clients) do
-                table.insert(c, client.name)
-              end
-              return "\u{f085} " .. table.concat(c, "|")
-            end,
-          },
+          clients_lsp,
+          Snacks.profiler.status(),
           -- stylua: ignore
           -- {
           --   function() return require("noice").api.status.command.get() end,
           --   cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
-          --   color = function() return LazyVim.ui.fg("Statement") end,
+          --   color = function() return { fg = Snacks.util.color("Statement") } end,
           -- },
           -- stylua: ignore
           -- {
           --   function() return require("noice").api.status.mode.get() end,
           --   cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
-          --   color = function() return LazyVim.ui.fg("Constant") end,
+          --   color = function() return { fg = Snacks.util.color("Constant") } end,
           -- },
           -- stylua: ignore
           {
             function() return "  " .. require("dap").status() end,
             cond = function() return package.loaded["dap"] and require("dap").status() ~= "" end,
-            color = function() return LazyVim.ui.fg("Debug") end,
+            color = function() return { fg = Snacks.util.color("Debug") } end,
           },
           -- stylua: ignore
           {
             require("lazy.status").updates,
             cond = require("lazy.status").has_updates,
-            color = function() return LazyVim.ui.fg("Special") end,
+            color = function() return { fg = Snacks.util.color("Special") } end,
           },
           {
             "diff",
@@ -115,7 +114,7 @@ return {
           end,
         },
       },
-      extensions = { "neo-tree", "lazy" },
+      extensions = { "neo-tree", "lazy", "fzf" },
     }
 
     -- do not add trouble symbols if aerial is enabled

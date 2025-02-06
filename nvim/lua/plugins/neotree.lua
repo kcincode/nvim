@@ -21,9 +21,11 @@ return {
       use_libuv_file_watcher = true,
       filtered_items = {
         visible = true,
-        -- hide_dotfiles = false,
-        -- hide_gitignored = false,
-        never_show = { ".git" },
+        never_show = {
+          "node_modules",
+          ".git",
+          ".cache",
+        },
       },
     },
     default_component_configs = {

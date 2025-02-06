@@ -9,6 +9,10 @@ return {
       typescript = { "prettier" },
       javascriptreact = { "prettier" },
       typescriptreact = { "prettier" },
+      elixir = { "mix" },
+      eelixir = { "mix" },
+      heex = { "mix" },
+      surface = { "mix" },
     },
   },
 }

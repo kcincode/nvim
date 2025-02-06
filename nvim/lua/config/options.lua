@@ -8,3 +8,4 @@ vim.g.lazyvim_python_ruff = "ruff"
 vim.g.lazyvim_prettier_needs_config = false
 
 vim.opt.scrolloff = 10
+vim.g.snacks_animate = false

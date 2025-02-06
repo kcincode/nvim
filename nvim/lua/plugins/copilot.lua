@@ -6,6 +6,7 @@ return {
     suggestion = { enabled = false },
     panel = { enabled = false },
     filetypes = {
+      elixir = true,
       python = true,
       go = true,
       typescript = true,

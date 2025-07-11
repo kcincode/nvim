@@ -1,6 +1,6 @@
 return {
   "stevearc/conform.nvim",
-  dependencies = { "mason.nvim" },
+  dependencies = { "mason.nvim", version = "^1.0.0" },
   lazy = true,
   opts = {
     formatters_by_ft = {
@@ -13,6 +13,8 @@ return {
       eelixir = { "mix" },
       heex = { "mix" },
       surface = { "mix" },
+      blade = { "blade-formatter" },
+      php = { "pint", "php-cs-fixer" },
     },
   },
 }

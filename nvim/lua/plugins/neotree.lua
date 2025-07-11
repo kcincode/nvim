@@ -7,6 +7,7 @@ return {
     "MunifTanjim/nui.nvim",
     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
   },
+  enabled = true,
   -- init = function ()
   --   -- do nothing
   -- end,
@@ -25,6 +26,7 @@ return {
           "node_modules",
           ".git",
           ".cache",
+          "__pycache__",
         },
       },
     },

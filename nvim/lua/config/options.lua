@@ -5,6 +5,7 @@
 vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.lazyvim_python_ruff = "ruff"
 
+vim.g.lazyvim_picker = "snacks"
 vim.g.lazyvim_prettier_needs_config = false
 
 vim.opt.scrolloff = 10

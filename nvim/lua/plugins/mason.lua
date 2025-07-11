@@ -1,0 +1,32 @@
+return {
+  { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
+  {
+    "mason-org/mason.nvim",
+    version = "^1.0.0",
+    opts = {
+      ensure_installed = {
+        "gopls",
+        "basedpyright",
+        "djlint",
+        "docker-compose-language-service",
+        "dockerfile-language-server",
+        "elixir-ls",
+        "gofumpt",
+        "goimports",
+        "hadolint",
+        "json-lsp",
+        "lua-language-server",
+        "php-cs-fixer",
+        "phpactor",
+        "phpcs",
+        "prettier",
+        "ruff",
+        "shfmt",
+        "stylua",
+        "tailwindcss-language-server",
+        "vtsls",
+        "templ",
+      },
+    },
+  },
+}
